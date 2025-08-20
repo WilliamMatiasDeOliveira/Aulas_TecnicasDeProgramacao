@@ -2,12 +2,12 @@
 
 if ($_GET) {
     // outras rotas
+    $controle = $_GET['controle'];
+    $metodo = $_GET['metodo'];
+
     require_once "controllers/$controle.php";
 
-    $controle = $_GET['controle'];
-    $metodo = $get['metodo'];
-
-    $obj = new $controlle();
+    $obj = new $controle();
     $obj->$metodo();
 
 } else {
